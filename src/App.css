@@ -1,0 +1,9 @@
+
+@reference "tailwindcss";
+body {
+bg-background-light dark:bg-background-dark text-primary dark:text-white;
+}
+
+a {
+  @apply transition-all duration-300;
+}
