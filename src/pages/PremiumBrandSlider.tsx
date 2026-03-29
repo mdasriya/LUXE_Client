@@ -1,7 +1,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import "swiper/css";
+// import "swiper/css";
 
 const brands = [
   "https://upload.wikimedia.org/wikipedia/commons/5/53/H%26M-Logo.svg",

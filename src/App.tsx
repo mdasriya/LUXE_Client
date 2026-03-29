@@ -8,7 +8,7 @@ import SummerSaleBanner from './pages/SummerSaleBanner'
 import Testimonials from './pages/Testimonials '
 import PremiumBrandSlider from './pages/PremiumBrandSlider'
 import ArtisanHero from './pages/ArtisanHero '
-import SummerCollection from './pages/SummerCollection '
+import SummerCollection from './pages/SummerCollection'
 
 function App() {
   

@@ -1,5 +1,5 @@
-import React from "react";
-import "swiper/css";
+// import React from "react";
+// import "swiper/css";
 
 const SummerSaleBanner = () => {
   return (
