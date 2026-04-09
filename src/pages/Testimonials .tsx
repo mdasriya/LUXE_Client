@@ -39,6 +39,8 @@ const Testimonials = () => {
 
         <Swiper
           modules={[Autoplay, Pagination]}
+          wrapperClass="h-full"
+          slideClass="h-full"
           spaceBetween={30}
           loop={true}
           autoplay={{
@@ -53,24 +55,22 @@ const Testimonials = () => {
           }}
         >
           {testimonials.map((item, index) => (
-            <SwiperSlide key={index}>
-              
+            <SwiperSlide key={index} className="h-full">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-white p-8 shadow-sm border border-slate-100 h-full"
+                className="bg-white p-6 shadow-sm border border-slate-100 h-full min-h-[250px] flex flex-col gap-6"
               >
-                
-                {/* Stars */}
-                <div className="flex gap-1 mb-4 text-[#D4B996]">
-                  ⭐⭐⭐⭐⭐
-                </div>
+                <div className="space-y-4">
+                  {/* Stars */}
+                  <div className="flex gap-1 text-[#D4B996]">⭐⭐⭐⭐⭐</div>
 
-                {/* Text */}
-                <p className="text-slate-600 italic mb-6">
-                  "{item.text}"
-                </p>
+                  {/* Text */}
+                  <p className="text-slate-600 italic">
+                    "{item.text}"
+                  </p>
+                </div>
 
                 {/* User */}
                 <div className="flex items-center gap-4">
@@ -86,9 +86,7 @@ const Testimonials = () => {
                     </p>
                   </div>
                 </div>
-
               </motion.div>
-
             </SwiperSlide>
           ))}
         </Swiper>
