@@ -38,7 +38,7 @@ export default function Navbar() {
               item.submenu ? (
                 <div
                   key={item.label}
-                  className="relative border border-green-700 h-full flex items-center px-3"
+                  className="relative h-full flex items-center px-3"
                   onMouseEnter={() => setOpenMenu(true)}
                   onMouseLeave={() => setOpenMenu(false)}
                 >
