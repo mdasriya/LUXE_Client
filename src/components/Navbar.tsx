@@ -26,8 +26,8 @@ export default function Navbar() {
   const cartItemCount = 2;
 
   return (
-    <header className="sticky top-0 z-50 bg-white dark:bg-background-dark backdrop-blur-xl border-b border-neutral-200 dark:border-neutral-800">
-      <div className="max-w-8xl mx-auto px-6 h-20 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-white backdrop-blur-xl border-b border-neutral-200">
+      <div className="max-w-8xl mx-auto px-6 h-[10vh] flex items-center justify-between">
         {/* LEFT */}
         <div className="flex items-center gap-12 h-full">
           <h5 className="text-2xl font-serif font-bold tracking-widest">LUXE</h5>
@@ -83,19 +83,11 @@ export default function Navbar() {
         {mobileOpen && (
           <>
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.4 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black z-40"
-              onClick={() => setMobileOpen(false)}
-            />
-
-            <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.4 }}
-              className="lg:hidden fixed top-0 right-0 w-full max-w-sm h-full bg-white dark:bg-background-dark z-50 flex flex-col shadow-2xl border border-amber-400"
+              className="lg:hidden fixed top-0 right-0 w-full h-screen bg-white z-50 flex flex-col shadow-2xl"
             >
               <div className="flex justify-between items-center px-6 py-5 border-b border-slate-200">
                 <h2 className="font-serif text-xl tracking-widest">MENU</h2>
