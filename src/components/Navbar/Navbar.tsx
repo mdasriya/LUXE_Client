@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
-import MegaMenu from "./MegaMenu";
+import MegaMenu from "./component/MegaMenu";
 
 type NavLink = {
   label: string;
