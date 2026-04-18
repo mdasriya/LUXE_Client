@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
 import MegaMenu from "./component/MegaMenu";
@@ -30,7 +31,9 @@ export default function Navbar() {
       <div className="max-w-8xl mx-auto px-6 h-[10vh] flex items-center justify-between">
         {/* LEFT */}
         <div className="flex items-center gap-12 h-full">
-          <h5 className="text-2xl font-serif font-bold tracking-widest">LUXE</h5>
+          <Link to="/" className="text-2xl font-serif font-bold tracking-widest">
+            LUXE
+          </Link>
 
           {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center gap-8 h-full justify-center">
