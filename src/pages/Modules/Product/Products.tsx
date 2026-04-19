@@ -139,7 +139,7 @@ const Products = () => {
                 Showing <span className="text-primary">24</span> of 158 products
               </span>
               <div className="flex items-center gap-6">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 lg:block hidden">
                   <span className="text-xs uppercase tracking-tighter font-bold">
                     Sort By:
                   </span>
@@ -149,11 +149,14 @@ const Products = () => {
                     <option>Price: High to Low</option>
                     <option>Best Selling</option>
                   </select>
+
                 </div>
+                   <div className="lg:hidden block">Mukesh</div>
+
                 
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10">
               <div className="group product-card relative">
                 <div className="relative overflow-hidden aspect-[3/4] bg-neutral-100">
                   <img
