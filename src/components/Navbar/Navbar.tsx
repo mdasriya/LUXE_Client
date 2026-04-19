@@ -25,7 +25,6 @@ const navLinks: NavLink[] = [
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [navLink, _] = useState(navLinks);
   const [mobileCollectionsOpen, setMobileCollectionsOpen] = useState(false);
   const cartItemCount = 2;
 
@@ -40,7 +39,7 @@ export default function Navbar() {
 
           {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center gap-8 h-full justify-center">
-            {navLink.map((item) => (
+            {navLinks.map((item) => (
               item.submenu ? (
                 <div
                   key={item.label}
