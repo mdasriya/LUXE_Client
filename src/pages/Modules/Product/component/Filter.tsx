@@ -9,7 +9,7 @@ const Filter = () => {
                   </h3>
                   <div className="px-2">
                     <input
-                      className="w-full accent-primary"
+                      className="w-full accent-black"
                       max="1000"
                       min="0"
                       type="range"

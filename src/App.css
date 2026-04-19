@@ -1,7 +1,0 @@
-
-@reference "tailwindcss";
-
-
-a {
-  @apply transition-all duration-300;
-}
