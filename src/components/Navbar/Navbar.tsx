@@ -25,7 +25,7 @@ const navLinks: NavLink[] = [
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [navLink, setNavLink] = useState(navLinks);
+  const [navLink, _] = useState(navLinks);
   const [mobileCollectionsOpen, setMobileCollectionsOpen] = useState(false);
   const cartItemCount = 2;
 
