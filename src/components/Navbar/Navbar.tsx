@@ -8,21 +8,24 @@ type NavLink = {
   label: string;
   href?: string;
   submenu?: string[];
+  isActive?: boolean;
 };
 
 const navLinks: NavLink[] = [
   {
     label: "Collections",
+    isActive: false,
     submenu: ["Spring Summer 24", "Autumn Winter 23", "Resort Wear"],
   },
-  { label: "Men", href: "/men" },
-  { label: "Women", href: "/women" },
-  { label: "Accessories", href: "/accessories" },
+  { label: "Men", href: "/men", isActive: true },
+  { label: "Women", href: "/women", isActive: false },
+  { label: "Accessories", href: "/accessories", isActive: false },
 ];
 
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [navLink, setNavLink] = useState(navLinks);
   const [mobileCollectionsOpen, setMobileCollectionsOpen] = useState(false);
   const cartItemCount = 2;
 
@@ -37,7 +40,7 @@ export default function Navbar() {
 
           {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center gap-8 h-full justify-center">
-            {navLinks.map((item) => (
+            {navLink.map((item) => (
               item.submenu ? (
                 <div
                   key={item.label}
@@ -54,7 +57,7 @@ export default function Navbar() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-sm font-medium hover:text-[#D4B996] transition-colors duration-200 cursor-pointer"
+                  className="text-sm font-medium hover:text-[#D4B996] transition-colors duration-200 cursor-pointer  active"
                 >
                   {item.label}
                 </a>
