@@ -1,14 +1,14 @@
+import { useState } from "react";
+import { CiFilter } from "react-icons/ci";
+
 const Products = () => {
+  const [open, setOpen] = useState<boolean>(false);
   return (
     <div className="bg-white p-2">
-      <h1 className="font-serif text-3xl md:text-5xl text-primary font-semibold mb-4">
+      <h1 className="font-serif text-3xl md:text-5xl text-primary font-semibold mb-3 mt-4">
         Men's Collection
       </h1>
-      <p className="text-primary/60 max-w-2xl text-lg leading-relaxed">
-        Elevate your everyday wardrobe with our curated selection of premium
-        essentials. From Italian-milled fabrics to bespoke tailoring
-        silhouettes.
-      </p>
+
       <main className="max-w-8xl sm:px-6 lg:px-8 py-10">
         <div className="flex flex-col lg:flex-row gap-12">
           <aside className="w-full lg:w-1/4 lg:sticky lg:top-28 h-fit space-y-8 hidden lg:block">
@@ -149,11 +149,33 @@ const Products = () => {
                     <option>Price: High to Low</option>
                     <option>Best Selling</option>
                   </select>
-
                 </div>
-                   <div className="lg:hidden block">Mukesh</div>
 
-                
+                <div className="text-center">
+                  <button
+                    onClick={() => setOpen(true)}
+                    className="gap-1.5 items-center bg-primary text-white px-4 py-2.5 rounded-md lg:hidden block flex-nowrap"
+                  >
+                    <CiFilter size={22} />
+                    FILTER
+                  </button>
+
+                  <div
+                    className={`fixed top-0 right-0 z-50 h-full w-80 bg-white shadow-lg transform transition-transform duration-300 
+  ${open ? "translate-x-0" : "translate-x-full"}`}
+                  >
+                    {/* Header */}
+                    <div className="flex justify-between items-center p-4 border-b">
+                      <h2 className="font-semibold text-lg">Filters</h2>
+                      <button onClick={() => setOpen(false)}>✕</button>
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-4 overflow-y-auto h-full">
+                      <p>Your filter content here...</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10">
@@ -301,7 +323,7 @@ const Products = () => {
                   </div>
                 </div>
               </div>
-             
+
               <div className="group product-card relative">
                 <div className="relative overflow-hidden aspect-[3/4] bg-neutral-100">
                   <img
@@ -451,7 +473,6 @@ const Products = () => {
                 </div>
               </div>
             </div>
-           
           </div>
         </div>
       </main>
