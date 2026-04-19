@@ -102,12 +102,12 @@ export default function Navbar() {
               </div>
 
               <div className="flex-1 overflow-y-auto px-6 py-6">
-                <ul className="space-y-6 text-lg font-medium">
+                <div className="space-y-6 text-lg font-medium flex flex-col">
                   {navLinks.map((item) =>
                     item.submenu ? (
-                      <li key={item.label}>
-                        <div
-                          className="flex justify-between items-center cursor-pointer"
+                      <span key={item.label}>
+                        <div 
+                          className=" flex justify-between items-center cursor-pointer"
                           onClick={() => setMobileCollectionsOpen((prev) => !prev)}
                         >
                           {item.label}
@@ -116,11 +116,11 @@ export default function Navbar() {
 
                         <AnimatePresence>
                           {mobileCollectionsOpen && (
-                            <motion.ul
+                            <motion.div
                               initial={{ height: 0, opacity: 0 }}
                               animate={{ height: "auto", opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
-                              className="mt-3 ml-2 space-y-3 text-sm text-slate-500 overflow-hidden"
+                              className="flex flex-col mt-3 ml-2 space-y-3 text-sm text-slate-500 overflow-hidden"
                             >
                               {item.submenu.map((child) => (
                                 <li
@@ -130,20 +130,21 @@ export default function Navbar() {
                                   {child}
                                 </li>
                               ))}
-                            </motion.ul>
+                            </motion.div>
                           )}
                         </AnimatePresence>
-                      </li>
+                      </span>
                     ) : (
-                      <li
+                      <a
+                      href={item.href}
                         key={item.label}
-                        className="cursor-pointer hover:text-[#D4B996] transition-colors duration-200"
+                        className=" cursor-pointer hover:text-[#D4B996] transition-colors duration-200"
                       >
                         {item.label}
-                      </li>
+                      </a>
                     )
                   )}
-                </ul>
+                </div>
               </div>
 
               <div className="border-t border-slate-200 px-6 py-4 flex justify-around">
