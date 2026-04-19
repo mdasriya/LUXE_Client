@@ -11,7 +11,7 @@ const Products = () => {
       </p>
       <main className="max-w-8xl sm:px-6 lg:px-8 py-10">
         <div className="flex flex-col lg:flex-row gap-12">
-          <aside className="w-full lg:w-1/4 lg:sticky lg:top-28 h-fit space-y-8">
+          <aside className="w-full lg:w-1/4 lg:sticky lg:top-28 h-fit space-y-8 hidden lg:block">
             <div>
               <h3 className="font-bold text-sm uppercase tracking-widest mb-4">
                 Price Range
@@ -150,18 +150,7 @@ const Products = () => {
                     <option>Best Selling</option>
                   </select>
                 </div>
-                <div className="flex items-center border-l border-primary/10 pl-6 gap-2">
-                  <button className="p-1.5 bg-primary text-white rounded-sm">
-                    <span className="material-symbols-outlined text-xl">
-                      grid_view
-                    </span>
-                  </button>
-                  <button className="p-1.5 hover:bg-primary/5 rounded-sm">
-                    <span className="material-symbols-outlined text-xl">
-                      view_list
-                    </span>
-                  </button>
-                </div>
+                
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10">
@@ -459,33 +448,7 @@ const Products = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-20 flex items-center justify-center gap-2">
-              <button className="p-2 border border-primary/10 hover:border-primary transition-colors">
-                <span className="material-symbols-outlined text-lg">
-                  chevron_left
-                </span>
-              </button>
-              <div className="flex items-center gap-1">
-                <button className="w-10 h-10 bg-primary text-white text-sm font-bold">
-                  1
-                </button>
-                <button className="w-10 h-10 hover:bg-primary/5 text-sm font-medium">
-                  2
-                </button>
-                <button className="w-10 h-10 hover:bg-primary/5 text-sm font-medium">
-                  3
-                </button>
-                <span className="px-2 text-primary/40">...</span>
-                <button className="w-10 h-10 hover:bg-primary/5 text-sm font-medium">
-                  8
-                </button>
-              </div>
-              <button className="p-2 border border-primary/10 hover:border-primary transition-colors">
-                <span className="material-symbols-outlined text-lg">
-                  chevron_right
-                </span>
-              </button>
-            </div>
+           
           </div>
         </div>
       </main>
