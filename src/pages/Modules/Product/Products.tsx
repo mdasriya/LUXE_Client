@@ -135,7 +135,7 @@ const Products = () => {
           </aside>
           <div className="w-full lg:w-3/4">
             <div className="flex items-center justify-between mb-8 pb-4 border-b border-primary/5">
-              <span className="text-sm text-primary/60 font-medium">
+              <span className="text-sm text-primary/60 font-medium  border-2 border-red-600">
                 Showing <span className="text-primary">24</span> of 158 products
               </span>
               <div className="flex items-center gap-6">
@@ -154,7 +154,7 @@ const Products = () => {
                 <div className="text-center">
                   <button
                     onClick={() => setOpen(true)}
-                    className="gap-1.5 items-center bg-primary text-white px-4 py-2.5 rounded-md lg:hidden block flex-nowrap"
+                    className="flex items-center gap-1.5 bg-primary text-white px-4 py-2.5 rounded-md lg:hidden whitespace-nowrap"
                   >
                     <CiFilter size={22} />
                     FILTER
