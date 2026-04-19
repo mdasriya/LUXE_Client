@@ -11,7 +11,7 @@ const Products = () => {
         Men's Collection
       </h1>
 
-      <main className="max-w-8xl sm:px-6 lg:py-10 lg:px-8 py-8">
+      <main className="max-w-8xl sm:px-6 lg:px-8 py-10">
         <div className="flex flex-col lg:flex-row gap-12">
        <Filter />
           <div className="w-full lg:w-3/4">
