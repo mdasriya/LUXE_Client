@@ -7,11 +7,11 @@ const Products = () => {
   const [open, setOpen] = useState<boolean>(false);
   return (
     <div className="bg-white p-2">
-      <h1 className="font-serif text-3xl md:text-5xl text-primary font-semibold mb-3 mt-4">
+      <h1 className="font-serif text-3xl md:text-5xl text-primary font-semibold mt-4">
         Men's Collection
       </h1>
 
-      <main className="max-w-8xl sm:px-6 lg:px-8 py-10">
+      <main className="max-w-8xl sm:px-6 lg:py-10 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-12">
        <Filter />
           <div className="w-full lg:w-3/4">
