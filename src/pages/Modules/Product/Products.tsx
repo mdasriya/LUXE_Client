@@ -135,7 +135,7 @@ const Products = () => {
           </aside>
           <div className="w-full lg:w-3/4">
             <div className="flex items-center justify-between mb-8 pb-4 border-b border-primary/5">
-              <span className="text-sm text-primary/60 font-medium  border-2 border-red-600">
+              <span className="text-sm text-primary/60 font-medium">
                 Showing <span className="text-primary">24</span> of 158 products
               </span>
               <div className="flex items-center gap-6">
