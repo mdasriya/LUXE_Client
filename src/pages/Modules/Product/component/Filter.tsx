@@ -15,8 +15,8 @@ const Filter = () => {
                       type="range"
                     />
                     <div className="flex justify-between mt-2 text-sm text-primary/60">
-                      <span>$0</span>
-                      <span>$1000+</span>
+                      <span>₹0</span>
+                      <span>₹1000+</span>
                     </div>
                   </div>
                 </div>
