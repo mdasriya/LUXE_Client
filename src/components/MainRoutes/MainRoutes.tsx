@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import { lazy, Suspense } from "react"
+import SignUp from "../SignUp/SignUp"
 
 const Login = lazy(() => import("../Login/Login"))
 const Home = lazy(() => import("../Home/Home"))
@@ -13,7 +14,8 @@ const MainRoutes = () => {
         <Route  path="/men" element={<Products />}/>
         <Route  path="/women" element={<Products />}/>
         <Route  path="/login" element={<Login />}/>
-      </Routes>
+          <Route  path="/signup" element={<SignUp />}/>
+        </Routes>
     </Suspense>
   )
 }

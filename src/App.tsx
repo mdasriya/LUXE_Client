@@ -6,13 +6,13 @@ import { useLocation } from 'react-router-dom'
 
 function App() {
   const location = useLocation();
-  const isLoginPage = location.pathname === '/login';
+  const isAuthPage = location.pathname === '/login' || location.pathname === '/signup';
 
   return (
     <>
-      {!isLoginPage && <Navbar />}
+      {!isAuthPage && <Navbar />}
       <MainRoutes />
-      {!isLoginPage && <Footer />}
+      {!isAuthPage && <Footer />}
     </>
   )
 }
